@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build
+frontend/.next/
+backend/html-to-txt-server
+*.exe
+
+# Env (optional: commit .env.example)
+frontend/.env
+.env
+.env.local
+
+# IDE / OS
+.idea/
+.DS_Store
+*.log
