@@ -24,10 +24,21 @@
   color: rgb(250 250 249);
 }
 
+.lead {
+  margin-bottom: 1.75rem;
+}
+
 .subtitle {
   font-size: 0.9375rem;
   color: rgb(168 162 158);
-  margin: 0 0 1.75rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.hint {
+  font-size: 0.8125rem;
+  color: rgb(145 135 128);
+  margin: 0.5rem 0 0;
   line-height: 1.5;
 }
 
@@ -81,14 +92,44 @@
   }
 }
 
-.fileName {
+.fileList {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0.5rem 0.75rem;
+  max-height: 10rem;
+  overflow: auto;
+  background: rgb(23 20 18);
+  border: 1px solid rgb(41 37 36);
+  border-radius: 0.5rem;
   font-size: 0.8125rem;
   color: rgb(168 162 158);
+  line-height: 1.5;
+}
+
+.fileListItem {
+  margin: 0;
+  padding: 0.15rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress {
+  font-size: 0.875rem;
+  color: rgb(168 162 158);
+  margin: 0;
 }
 
 .error {
   font-size: 0.875rem;
   color: rgb(254 202 202);
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.success {
+  font-size: 0.875rem;
+  color: rgb(167 243 208);
   margin: 0;
   padding: 0.5rem 0;
 }
@@ -140,4 +181,94 @@
     opacity: 0.5;
     cursor: not-allowed;
   }
+}
+
+.modalRoot {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgb(0 0 0 / 0.65);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  width: 100%;
+  max-width: 22rem;
+  max-height: min(90vh, 32rem);
+  overflow: auto;
+  background: rgb(28 25 23);
+  border: 1px solid rgb(68 64 60);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.6);
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: rgb(250 250 249);
+}
+
+.modalText,
+.modalHint {
+  font-size: 0.875rem;
+  color: rgb(168 162 158);
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.code {
+  font-size: 0.8125rem;
+  color: rgb(214 211 209);
+  background: rgb(23 20 18);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  word-break: break-all;
+}
+
+.modalLabel {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgb(214 211 209);
+  margin: 0.75rem 0 0.5rem;
+}
+
+.textInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem 1rem;
+  background: rgb(41 37 36);
+  border: 1px solid rgb(68 64 60);
+  border-radius: 0.5rem;
+  color: rgb(250 250 249);
+  font-size: 0.9375rem;
+
+  &:focus {
+    outline: none;
+    border-color: rgb(120 113 108);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.modalActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.modalFootnote {
+  font-size: 0.75rem;
+  color: rgb(120 113 108);
+  margin: 1rem 0 0;
+  line-height: 1.45;
 }
